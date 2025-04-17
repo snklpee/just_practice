@@ -22,6 +22,6 @@ fn main() {
     println!("remainder is {}",remainder);
 
     // powers and exponentiation
-    let exponent = 2.1f64;
-    println!("exponentiation is: {}",exponent.powf(2.0));
+    let exponent = 2.1f64; //type (f64 here)  has to be explicitly defined
+    println!("exponentiation is: {}",exponent.powf(-2.0));
 }
