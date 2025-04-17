@@ -1,6 +1,5 @@
 fn main() {
-    let spaces = "   ";
-    println!("The value of spaces is an empty space: {spaces}");
-    let spaces = spaces.len();
-    println!("The value of spaces is now a number: {spaces}");
+    let mut spaces = "   ";
+    spaces = spaces.len();
+    // this does not compile because rust does not allow the mutation of variable's type
 }
