@@ -1,27 +1,19 @@
+use std::io;
+
 fn main() {
-    // addition
-    let sum = 5 + 10;
-    println!("sum is {}",sum);
+    let mut guess = String::new();
 
-    // subtraction
-    let difference = 95.5 - 4.3;
-    println!("difference is {}",difference);
+    io::stdin().read_line(&mut guess).expect("Failed to read line");
 
-    // multiplication
-    let product = 4 * 30;
-    println!("product is {}",product);
+    let guess: f32 = match guess.trim().parse(){
+        Ok(number)=>number,
+        Err(_)=>{
+            let guess: f32 = 0.0;
+            println!("setting guess as {} as the expected input was not found",guess);
+            guess
+        }
+    };
 
-    // division
-    let quotient = 56.7 / 32.2;
-    println!("quotient is {}",quotient);
-    let truncated = -15.1 / 3.0; // Results in -1
-    println!("truncated is {}",truncated);
-
-    // remainder
-    let remainder = 43 % 5;
-    println!("remainder is {}",remainder);
-
-    // powers and exponentiation
-    let exponent = 2.1f64; //type (f64 here)  has to be explicitly defined
-    println!("exponentiation is: {}",exponent.powf(-2.0));
+    println!("guess is now: {} and guess+0.3 = {}",guess,guess+0.3);
+    
 }
