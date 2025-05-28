@@ -9,8 +9,6 @@ fn main() {
 
     println!("The secret number is: {secret_number}");
 
-    let itr = 50
-
     loop {
         println!("Please input your guess.");
 
